@@ -1,0 +1,44 @@
+﻿services:
+  api:
+    build:
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    image: bigrouille/portfolio:backend-latest
+    container_name: portfolio-backend.prod
+    env_file:
+      - ./Production/.env.server
+    secrets:
+      - db_password
+    
+  migration:
+    build:
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    image: bigrouille/portfolio:migration-latest
+    container_name: portfolio-migration.prod
+    env_file:
+      - ./Production/.env.server
+    secrets:
+      - db_password
+    
+    
+  db:
+    container_name: portfolio-db.prod
+    env_file:
+      - ./Production/.env.db
+    secrets:
+      - db_password
+    
+  frontend:
+    build:
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    image: bigrouille/portfolio:frontend-latest
+    container_name: portfolio-frontend.prod
+    
+secrets:
+  db_password:
+    file: ../Docker.secret/db_password.txt

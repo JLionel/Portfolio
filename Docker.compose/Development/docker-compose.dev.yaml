@@ -1,0 +1,28 @@
+﻿services:
+  api:
+    image: portfolio.backend:dev
+    container_name: portfolio-backend.dev
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./Development/.env.server
+    
+    
+  migration:
+    image: portfolio.migration:dev
+    container_name: portfolio-migration.dev
+    env_file:
+      - ./Development/.env.server
+    
+  db:
+    container_name: portfolio-db.dev
+    env_file:
+      - ./Development/.env.db
+    ports:
+      - "5432:5432"
+    
+  frontend:
+    image: portfolio.frontend:dev
+    container_name: portfolio-frontend.dev
+    ports:
+      - "80:3000"

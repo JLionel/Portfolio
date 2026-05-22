@@ -1,0 +1,68 @@
+﻿# docker-compose.yaml
+## Build commands :
+  # Dev front + api : docker compose --env-file Development/.env --profile web build
+  # Prod front + api : docker compose --env-file Production/.env --profile web build --push
+## Up commands :
+  # Dev front + api : docker compose --env-file Development/.env --profile web up -d
+  # Prod; launched on the main server : docker compose --profile web up -d
+
+# To build/up only one service, remove the --profile argument
+ # exemple : docker compose --env-file Production/.env build api --push
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: Docker.dockerfile/Backend/api.Dockerfile
+    profiles: ["web", "all", "builweb"]
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend
+      - frontend
+    
+  migration:
+    build:
+      context: ..
+      dockerfile: Docker.dockerfile/Migration/migration.Dockerfile
+    profiles: ["mgt", "all"]
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend
+      
+  db:
+    image: postgres:18-alpine
+    profiles: ["web", "all"]
+    restart: always
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d next_tuto" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - db-data:/var/lib/postgresql
+    networks:
+      - backend
+    
+  frontend:
+    build:
+      context: ..
+      dockerfile: Docker.dockerfile/Frontend/frontend.Dockerfile
+    profiles: ["web", "all", "builweb"]
+    depends_on:
+      - api
+    networks:
+      - frontend
+
+volumes:
+  db-data:
+    
+networks:
+  frontend:
+    external: false
+  backend:
+    external: false
+    

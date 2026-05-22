@@ -1,0 +1,20 @@
+@backend_HostAddress = http://localhost:8080/api/data/next_tuto/
+
+###
+GET {{backend_HostAddress}}/Users
+Accept: application/json
+
+###
+GET {{backend_HostAddress}}/Invoices
+Accept: application/json
+
+###
+GET {{backend_HostAddress}}/Revenue
+Accept: application/json
+
+###
+GET {{backend_HostAddress}}/Customers
+Accept: application/json
+
+###
+POST {{backend_HostAddress}}/Debug_Seed
