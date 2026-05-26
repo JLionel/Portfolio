@@ -1,5 +1,32 @@
-﻿import { Inter, Lusitana } from 'next/font/google'
+﻿import { Inter, Lusitana, Outfit, Cormorant_SC } from "next/font/google";
 
-export const inter = Inter({ subsets: ['latin']});
+// Memo:
+// 100: thin
+// 200: extra light
+// 300: light
+// 400: regular
+// 500: medium
+// 600: semi bold
+// 700: bold
+// 800: extra bold
+// 900: black
 
-export const lusitana = Lusitana({ weight: ['400', '700'], subsets: ['latin']});
+// Next-tuto fonts
+export const inter = Inter({ subsets: ["latin"] });
+
+export const lusitana = Lusitana({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
+// Portfolio fonts
+
+export const outfit = Outfit({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
+export const cormorant_sc = Cormorant_SC({
+  weight: ["600"],
+  subsets: ["latin"],
+});

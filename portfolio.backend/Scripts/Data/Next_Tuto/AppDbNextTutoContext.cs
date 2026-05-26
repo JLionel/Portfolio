@@ -42,12 +42,12 @@ public class AppDbNextTutoContext(DbContextOptions<AppDbNextTutoContext> options
 
         // Seed Customers
         modelBuilder.Entity<Customers>().HasData(
-            new Customers { Id = evilRabbitId, Name = "Evil Rabbit", Email = "evil@rabbit.com", ImageUrl = "/customers/evil-rabbit.png" },
-            new Customers { Id = delbaOliveiraId, Name = "Delba de Oliveira", Email = "delba@oliveira.com", ImageUrl = "/customers/delba-de-oliveira.png" },
-            new Customers { Id = leeRobinsonId, Name = "Lee Robinson", Email = "lee@robinson.com", ImageUrl = "/customers/lee-robinson.png" },
-            new Customers { Id = michaelNovotnyId, Name = "Michael Novotny", Email = "michael@novotny.com", ImageUrl = "/customers/michael-novotny.png" },
-            new Customers { Id = amyBurnsId, Name = "Amy Burns", Email = "amy@burns.com", ImageUrl = "/customers/amy-burns.png" },
-            new Customers { Id = balazsOrbanId, Name = "Balazs Orban", Email = "balazs@orban.com", ImageUrl = "/customers/balazs-orban.png" }
+            new Customers { Id = evilRabbitId, Name = "Evil Rabbit", Email = "evil@rabbit.com", ImageUrl = "/next-tuto/customers/evil-rabbit.png" },
+            new Customers { Id = delbaOliveiraId, Name = "Delba de Oliveira", Email = "delba@oliveira.com", ImageUrl = "/next-tuto/customers/delba-de-oliveira.png" },
+            new Customers { Id = leeRobinsonId, Name = "Lee Robinson", Email = "lee@robinson.com", ImageUrl = "/next-tuto/customers/lee-robinson.png" },
+            new Customers { Id = michaelNovotnyId, Name = "Michael Novotny", Email = "michael@novotny.com", ImageUrl = "/next-tuto/customers/michael-novotny.png" },
+            new Customers { Id = amyBurnsId, Name = "Amy Burns", Email = "amy@burns.com", ImageUrl = "/next-tuto/customers/amy-burns.png" },
+            new Customers { Id = balazsOrbanId, Name = "Balazs Orban", Email = "balazs@orban.com", ImageUrl = "/next-tuto/customers/balazs-orban.png" }
         );
 
         // Seed Invoices (Generated IDs as they were missing in JSON)
