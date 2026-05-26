@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} bg-gray-900 antialiased text-black dark:text-gray-400`}
+        className={`${outfit.className} bg-gray-900 antialiased text-gray-400`}
       >
         {children}
       </body>
