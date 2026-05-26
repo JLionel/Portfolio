@@ -53,42 +53,42 @@ namespace portfolio.backend.Migrations
                         {
                             Id = new Guid("d6e15727-9fe1-4961-8c5b-ea44a9bd81aa"),
                             Email = "evil@rabbit.com",
-                            ImageUrl = "/customers/evil-rabbit.png",
+                            ImageUrl = "/next-tuto/customers/evil-rabbit.png",
                             Name = "Evil Rabbit"
                         },
                         new
                         {
                             Id = new Guid("3958dc9e-712f-4377-85e9-fec4b6a6442a"),
                             Email = "delba@oliveira.com",
-                            ImageUrl = "/customers/delba-de-oliveira.png",
+                            ImageUrl = "/next-tuto/customers/delba-de-oliveira.png",
                             Name = "Delba de Oliveira"
                         },
                         new
                         {
                             Id = new Guid("3958dc9e-742f-4377-85e9-fec4b6a6442a"),
                             Email = "lee@robinson.com",
-                            ImageUrl = "/customers/lee-robinson.png",
+                            ImageUrl = "/next-tuto/customers/lee-robinson.png",
                             Name = "Lee Robinson"
                         },
                         new
                         {
                             Id = new Guid("76d65c26-f784-44a2-ac19-586678f7c2f2"),
                             Email = "michael@novotny.com",
-                            ImageUrl = "/customers/michael-novotny.png",
+                            ImageUrl = "/next-tuto/customers/michael-novotny.png",
                             Name = "Michael Novotny"
                         },
                         new
                         {
                             Id = new Guid("cc27c14a-0acf-4f4a-a6c9-d45682c144b9"),
                             Email = "amy@burns.com",
-                            ImageUrl = "/customers/amy-burns.png",
+                            ImageUrl = "/next-tuto/customers/amy-burns.png",
                             Name = "Amy Burns"
                         },
                         new
                         {
                             Id = new Guid("13d07535-c59e-4157-a011-f8d2ef4e0cbb"),
                             Email = "balazs@orban.com",
-                            ImageUrl = "/customers/balazs-orban.png",
+                            ImageUrl = "/next-tuto/customers/balazs-orban.png",
                             Name = "Balazs Orban"
                         });
                 });

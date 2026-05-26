@@ -1,5 +1,5 @@
-﻿import AcmeLogo from "@/app/ui/acme-logo";
-import LoginForm from "@/app/ui/login-form";
+﻿import AcmeLogo from "@/app/ui/next-tuto/acme-logo";
+import LoginForm from "@/app/ui/next-tuto/login-form";
 import { Suspense } from "react";
 import { Metadata } from "next";
 

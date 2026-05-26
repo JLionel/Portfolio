@@ -28,10 +28,6 @@
     </ItemGroup>
     
     <ItemGroup>
-        <Using Include="portfolio.backend.Scripts.Utils.JSON" Alias="JsonHelper" />
-    </ItemGroup>
-    
-    <ItemGroup>
         <Content Update="Content\Data\placeholder-data.json">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
@@ -40,7 +36,6 @@
     
     <ItemGroup>
       <Folder Include="Migrations\" />
-      <Folder Include="Scripts\Utils\" />
     </ItemGroup>
 
 </Project>
