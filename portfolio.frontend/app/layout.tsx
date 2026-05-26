@@ -1,5 +1,4 @@
 import "@/app/ui/global.css";
-import "@/app/ui/global-properties.css";
 import React from "react";
 import { outfit } from "@/app/ui/fonts";
 
