@@ -2,7 +2,7 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import styles from "@/app/ui/next-tuto/home.module.css";
-import { lusitana } from "@/app/ui/next-tuto/fonts";
+import { lusitana } from "@/app/ui/fonts";
 import Image from "next/image";
 import { Metadata } from "next";
 

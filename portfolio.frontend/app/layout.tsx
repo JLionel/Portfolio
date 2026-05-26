@@ -1,6 +1,7 @@
 import "@/app/ui/global.css";
+import "@/app/ui/global-properties.css";
 import React from "react";
-import { outfit } from "@/app/ui/next-tuto/fonts";
+import { outfit } from "@/app/ui/fonts";
 
 export default function RootLayout({
   children,
@@ -10,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} antialiased text-black dark:text-gray-400`}
+        className={`${outfit.className} bg-gray-900 antialiased text-black dark:text-gray-400`}
       >
         {children}
       </body>

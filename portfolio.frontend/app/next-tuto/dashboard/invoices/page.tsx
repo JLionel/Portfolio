@@ -2,7 +2,7 @@
 import Search from "@/app/ui/next-tuto/search";
 import Table from "@/app/ui/next-tuto/invoices/table";
 import { CreateInvoice } from "@/app/ui/next-tuto/invoices/buttons";
-import { lusitana } from "@/app/ui/next-tuto/fonts";
+import { lusitana } from "@/app/ui/fonts";
 import { InvoicesTableSkeleton } from "@/app/ui/next-tuto/skeletons";
 import { Suspense } from "react";
 import { fetchInvoicesPages } from "@/app/lib/data";

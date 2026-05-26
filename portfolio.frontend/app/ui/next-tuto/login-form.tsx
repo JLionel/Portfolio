@@ -1,6 +1,6 @@
 "use client";
 
-import { lusitana } from "./fonts";
+import { lusitana } from "../fonts";
 import {
   AtSymbolIcon,
   KeyIcon,

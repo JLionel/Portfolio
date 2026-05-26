@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { lusitana } from "../fonts";
+import { lusitana } from "../../fonts";
 import Search from "@/app/ui/next-tuto/search";
 import { FormattedCustomersTable } from "@/app/lib/definitions";
 

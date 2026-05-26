@@ -1,4 +1,4 @@
-﻿import { lusitana } from "@/app/ui/next-tuto/fonts";
+﻿import { lusitana } from "@/app/ui/fonts";
 import RevenueChart from "@/app/ui/next-tuto/dashboard/revenue-chart";
 import LatestInvoices from "@/app/ui/next-tuto/dashboard/latest-invoices";
 import { Suspense } from "react";

@@ -1,6 +1,6 @@
 ﻿import { Metadata } from "next";
 import React from "react";
-import { inter } from "@/app/ui/next-tuto/fonts";
+import { inter } from "@/app/ui/fonts";
 
 export const metadata: Metadata = {
   title: {
