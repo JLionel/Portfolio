@@ -1,14 +1,35 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import { localThemes } from "@/app/ui/theme-provider";
 
 export default function ThemeToggle() {
+  const [mounted, setMounted] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const { theme, resolvedTheme, setTheme } = useTheme();
 
   const handleToggle = (value: boolean) => {
-    console.log(value);
     setIsChecked(value);
+    setTheme(value ? localThemes.light : localThemes.dark);
   };
+
+  useEffect(() => {
+    setMounted(true);
+
+    let finalTheme = theme;
+
+    if (theme === localThemes.system) finalTheme = resolvedTheme;
+
+    console.log(finalTheme);
+
+    setIsChecked(finalTheme === localThemes.light);
+  }, [theme, resolvedTheme, localThemes]);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <label className="w-auto inline-flex items-center cursor-pointer">
@@ -17,18 +38,15 @@ export default function ThemeToggle() {
         value=""
         className="sr-only peer"
         onChange={(value) => handleToggle(value.target.checked)}
+        checked={isChecked}
       />
       <div
-        className={`relative w-17 h-9 bg-neutral-800 peer-focus:outline-none rounded-full peer-checked:bg-orange-300`}
+        className={`relative w-17 h-9 bg-orange-300 peer-focus:outline-none rounded-full dark:bg-neutral-800`}
       />
       <span
-        className={`absolute m-1 grid content-center justify-center bg-white rounded-full h-7 w-7 transition peer-checked:translate-x-8`}
+        className={`absolute m-1 grid content-center justify-center text-neutral-900 bg-white rounded-full h-7 w-7 transition peer-checked:translate-x-8`}
       >
-        {isChecked ? (
-          <div className={"bi bi-brightness-high text-black"} />
-        ) : (
-          <div className={"bi bi-moon text-black "} />
-        )}
+        {isChecked ? <Sun /> : <Moon />}
       </span>
     </label>
   );

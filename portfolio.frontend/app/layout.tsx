@@ -1,6 +1,7 @@
 import "@/app/ui/global.css";
 import React from "react";
 import { outfit } from "@/app/ui/fonts";
+import { ThemeProvider } from "@/app/ui/theme-provider";
 
 export default function RootLayout({
   children,
@@ -8,11 +9,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${outfit.className} bg-gray-900 antialiased text-gray-400`}
+        className={`${outfit.className} antialiased  text-neutral-900 bg-zinc-100 dark:bg-gray-900 dark:text-gray-400 boubou:bg-red-800`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

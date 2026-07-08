@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <div
         className={
-          "h-[150] bg-neutral-900 flex flex-row shadow-[0_15px_19px_#000000]"
+          "h-36 flex flex-row bg-neutral-50 shadow-[0_15px_19px_#E4E4E7] dark:bg-neutral-900 dark:shadow-[0_15px_19px_#000000]"
         }
       >
         <div className={"w-1/3 p-6"}>
