@@ -7,11 +7,13 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main>
-      <p>Projects page WIP</p>
-      <p className={"text-blue-500 underline underline-offset-2"}>
-        <Link href={"https://github.com/JLionel"}>Github</Link>
-      </p>
-    </main>
+    <>
+      <div className={"main-page"}>
+        <p>Projects page WIP</p>
+        <p className={"text-blue-500 underline underline-offset-2"}>
+          <Link href={"https://github.com/JLionel"}>Github</Link>
+        </p>
+      </div>
+    </>
   );
 }

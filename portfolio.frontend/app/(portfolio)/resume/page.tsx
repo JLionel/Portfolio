@@ -6,8 +6,10 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main>
-      <p>Resume page WIP</p>
-    </main>
+    <>
+      <div className={"main-page"}>
+        <p>Resume page WIP</p>
+      </div>
+    </>
   );
 }

@@ -1,4 +1,4 @@
-﻿import { Inter, Lusitana, Outfit, Cormorant_SC } from "next/font/google";
+﻿import { Inter, Lusitana, Outfit } from "next/font/google";
 
 // Memo:
 // 100: thin
@@ -22,11 +22,6 @@ export const lusitana = Lusitana({
 // Portfolio fonts
 
 export const outfit = Outfit({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
-
-export const cormorant_sc = Cormorant_SC({
-  weight: ["600"],
+  weight: ["200", "300"],
   subsets: ["latin"],
 });
