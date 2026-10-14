@@ -47,4 +47,4 @@ WIP : will explain here later how it works.
 
 ## AI Usage
 AI was not used to auto generate a bunch of code in my place by asking it to do it.  
-It was only used to help me understand things, and was used as a faster web browser.
+It was only used to help me understand things, refactor boring task, and was used as a faster web browser and learning tool.
